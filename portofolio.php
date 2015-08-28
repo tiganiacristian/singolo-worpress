@@ -23,39 +23,34 @@
             <p class="portofolio_text"><?php echo get_the_content(); ?></p>
         <?php endwhile; endif; ?>
 
-
         <input type="radio" id="radio1" name="group1" value="li" checked>
         <label for="radio1">All</label>
        
             <?php $terms = get_terms('projects_category', array('hide_empty' => false)); ?>
             <?php foreach ($terms as $term) : ?>
             <?php $category_class= strtolower($term->name);
-                $category_class= str_replace(" ", "-", $category_class);?>
+                   $category_class= str_replace(" ", "-", $category_class);
+            ?>
 
-        <input type="radio" id="<?php echo $term->name; ?>" name="group1" value="<?php echo "." . $category_class; ?>">
-        <label for="<?php echo $term->name; ?>"><?php echo $term->name; ?></label>
+                <input type="radio" id="<?php echo $term->name; ?>" name="group1" value="<?php echo "." . $category_class; ?>">
+                <label for="<?php echo $term->name; ?>"><?php echo $term->name; ?></label>
 
-             <?php endforeach; ?>
-
+            <?php endforeach; ?>
 
 
         <ul class="portofolio_pictures"> 
 
+            <?php while ( $portfolio_list->have_posts() ) : $portfolio_list->the_post();  ?>
+                 <?php 
+                    $post_terms = wp_get_post_terms( $post->ID, 'projects_category', array( "fields" => "slugs" ) );
+                    $post_terms_space_separated = implode(" ", $post_terms);                
+                 ?>
 
-        <?php while ( $portfolio_list->have_posts() ) : $portfolio_list->the_post();  ?>
-
-
-            <?php 
-                $post_terms = wp_get_post_terms( $post->ID, 'projects_category', array( "fields" => "slugs" ) );
-                $post_terms_space_separated = implode(" ", $post_terms);                
-             ?>
-
-            <li class=" <?php echo $post_terms_space_separated; ?>"><?php the_post_thumbnail('project-thumb'); ?></li>
-
-
-        <?php  endwhile; ?>
+               <li class=" <?php echo $post_terms_space_separated; ?>"> <a href="<?php  echo get_permalink(); ?>" target="_blank"><?php the_post_thumbnail('project-thumb'); ?></a></li>
+            <?php  endwhile; ?>
 
         </ul>
     </div>
 </div>
-<?php include("footer.php"); ?>
+
+<?php get_footer(); ?>
