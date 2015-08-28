@@ -1,0 +1,191 @@
+@media all and (max-width: 1024px) {
+	/*+++ START Our-Services +++*/
+    .services-list {
+        width 100%;
+    }
+    .service {
+        max-width: 48%;
+        width: 100%;
+    }
+    .service:nth-child(2n+2) {
+        margin-right: 0;
+    }
+    .service-description {
+        width: 100%;
+        max-width: 75%;
+    }
+    .service-description p {
+        width: 100%;
+    }
+    /*--- END Our-Services ---*/
+
+    /*+++ START Portfolio +++*/
+    .portofolio_pictures li {
+        max-width: 32%;
+        width: 100%;
+    }
+    .portofolio_pictures li:nth-child(3n+3) {
+        margin-right: 0;
+    }
+    .portofolio_pictures li img{
+        width: 100%;
+    }
+    /*--- END Portfolio ---*/
+
+    /*+++ START About-Us +++*/
+    .about-us_profile > li {
+        vertical-align: top;
+        max-width: 48%;
+        width: 100%;
+        padding-right: 0;
+        margin-right: 2%;
+        margin-bottom: 2%;
+    }
+    .about-us_profile li:nth-child(2n+2) {
+        margin-right: 0;
+    }
+    .about-us_profile li img {
+        width: 100%;
+    }
+    .social-media-sites li {
+        margin-left: 0;
+    }
+    /*--- END About-Us ---*/
+
+}
+
+@media all and (max-width: 800px) {
+    /*+++ START Portfolio +++*/
+    .portofolio_pictures li {
+        max-width: 48%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+    }
+    .portofolio_pictures li:nth-child(3n+3) {
+        margin-right: 2%;
+    }
+    .portofolio_pictures li:nth-child(2n+2) {
+        margin-right: 0;
+    }
+    /*--- END Portfolio ---*/
+}
+@media all and (max-width: 750px) {
+    /*+++ START Our-Services +++*/
+    .service {
+        max-width: 100%;
+        margin-right: 0;
+    }
+    /*--- END Our-Services ---*/
+}
+@media all and (max-width: 640px) {
+    /*+++ START Header Menu +++*/
+   /* header {    
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }*/
+
+    header .inner-content {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .header-logo {
+        top: 30px;
+    }
+    .toggle-menu {
+        display: inline-block;
+        padding-top: 10px;
+        cursor: pointer;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .active {
+        display: block;
+        margin-top: 25px;
+    }
+    .active li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .active li a {
+        margin-right: 0;
+    }
+    .active li:before {
+        content: initial;
+    }
+    /*--- END Header Menu ---*/
+
+    /*+++ START Portfolio +++*/
+    .portofolio input[type=radio] + label {
+        display: block;
+        text-align: center;
+        padding: 14px 0;
+        margin-left: 0;
+        margin-bottom: 14px;
+    }
+    .portofolio_pictures li {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 2%;
+    }
+    .portofolio_pictures li:nth-child(3n+3) {
+        margin-right: 0;
+    }
+    /*--- END Portfolio ---*/
+
+    /*+++ START About-Us +++*/
+    .about-us_profile {
+        margin-bottom: 0;
+    }
+    .about-us_profile > li {
+        max-width: 100%;
+        text-align: center;
+    }
+    /*--- END About-Us ---*/
+    
+    /*+++ START Contact +++*/
+    .quote-form {
+        width: 100%;
+    }
+    .quote-form input, textarea{
+        width: 100%;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
+    .quote-form input[type = "submit"]{
+        width: 100%;
+        margin-right: 0;
+    }
+    .contact-information {
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+    .contact-information p {
+        display: inline-block;
+        width: 100%;
+    }
+    .contact-information ul {
+        display: inline-block;
+        text-align: left;
+    }
+    /*--- END Contact ---*/
+
+    /*+++ START Footer +++*/
+    footer {
+        text-align: center;
+    }
+    footer .copyright {
+        padding-bottom: 0;
+    }
+    footer .social-media-container {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    /*--- END Footer ---*/
+
+}
+
