@@ -22,11 +22,7 @@
             <h3 class="portofolio_title"><?php the_title(); ?></h1>
             <p class="portofolio_text"><?php echo get_the_content(); ?></p>
         <?php endwhile; endif; ?>
-<!-- 
-        <h3 class="portofolio_title">Portfolio</h3>
 
-        <p class="portofolio_text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
-            sem nec elit.</p> -->
 
         <input type="radio" id="radio1" name="group1" value="li" checked>
         <label for="radio1">All</label>
@@ -41,10 +37,6 @@
 
              <?php endforeach; ?>
 
-       <!--  <input type="radio" id="radio3" name="group1" value=".graphics-design">
-        <label for="radio3">Graphics Design</label>
-        <input type="radio" id="radio4" name="group1" value=".artwork">
-        <label for="radio4">Artwork</label> -->
 
 
         <ul class="portofolio_pictures"> 
