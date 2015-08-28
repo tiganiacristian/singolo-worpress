@@ -299,11 +299,20 @@ ul{
     background-color: #2d303a;
 }
 
+.project-center{
+    text-align: center;
+}
+
+
 .portofolio_title {
     font-family: LatoBlack;
     color: #666d89;
     font-size: 1.85em;
 
+}
+
+.portofolio_title--single{
+    text-transform: capitalize;
 }
 
 .portofolio_text {
